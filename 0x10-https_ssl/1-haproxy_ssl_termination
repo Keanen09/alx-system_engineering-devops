@@ -40,7 +40,7 @@ frontend keanen-frontend
         http-request set-header X_Forwarded-Proto http
         default_backend keanen-backend
 
-frontend clickviral-frontend-https
+frontend keanen-frontend-https
         bind *:443 ssl crt /etc/haproxy/certs/keanen.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend keanen-backend
