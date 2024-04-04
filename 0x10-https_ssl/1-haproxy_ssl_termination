@@ -40,12 +40,12 @@ frontend keanen-frontend
         http-request set-header X_Forwarded-Proto http
         default_backend keanen-backend
 
-frontend keanen-frontend-https
+frontend clickviral-frontend-https
         bind *:443 ssl crt /etc/haproxy/certs/keanen.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend keanen-backend
 
 backend keanen-backend
         balance roundrobin
-        server 151666-web-01 54.165.177.164:80 check
-        server 151666-web-02 52.73.37.76:80 check
+        server 151666-web-01 34.198.248.145:80 check
+        server 151666-web-02 54.89.38.100:80 check
